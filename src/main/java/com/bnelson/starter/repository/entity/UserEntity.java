@@ -1,19 +1,31 @@
 package com.bnelson.starter.repository.entity;
 
 import com.google.common.base.Objects;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 import java.util.UUID;
 
 @Entity
+@Table(name = "users")
 public class UserEntity {
 
     @Id
+    @Column(name = "uuid")
     private UUID uuid;
+
+    @Column(name = "first_name")
     private String firstName;
+
+    @Column(name = "last_name")
     private String lastName;
+
+    @Column(name = "email")
     private String email;
+
+    @Column(name = "pass")
     private String password;
 
     public UUID getUuid() {

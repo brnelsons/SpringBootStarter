@@ -5,14 +5,15 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.UUID;
 
-@RequestMapping("/api/v1/users")
 public interface UserController {
 
     @GetMapping(
+            path = "",
             produces = MediaType.APPLICATION_JSON_VALUE)
-    Iterable<User> getUsers();
+    List<User> getUsers();
 
     @PostMapping(
             produces = MediaType.APPLICATION_JSON_VALUE,

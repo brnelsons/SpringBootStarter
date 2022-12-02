@@ -1,0 +1,25 @@
+### Get list of users
+GET http://localhost:8080/api/v1/users
+Accept: application/json
+
+### Create a user
+POST http://localhost:8080/api/v1/users
+Accept: application/json
+Content-Type: application/json
+
+{
+  "firstName": "brian",
+  "lastName": "nelson",
+  "email":  "brnelsons139@gmail.com"
+}
+
+### Update a user
+POST http://localhost:8080/api/v1/users
+Accept: application/json
+Content-Type: application/json
+
+{
+  "firstName": "brian",
+  "lastName": "nelson",
+  "email":  "brnelsons139@gmail.com"
+}
